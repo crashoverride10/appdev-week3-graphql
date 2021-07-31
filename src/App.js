@@ -1,7 +1,7 @@
 import "./App.css"
 import { useEffect, useState } from "react"
 import Section from "./components/Section"
-import HeroSection from "./components/HeroSection"
+//import HeroSection from "./components/HeroSection"
 import NavBar from "./components/NavBar"
 
 const App = () => {
@@ -28,6 +28,7 @@ const App = () => {
   return (
     <>
       <NavBar />
+      //<HeroSection />
       {genres && (
         <div className="container">
           {Object.values(genres).map((genre) => (
