@@ -10,19 +10,20 @@ exports.handler = async function (event) {
     movies_by_genre (
       value: { genre: ${JSON.stringify(genre)}},
       orderBy: [year_DESC],
-      options: { pageSize: 6, pageState: ${JSON.stringify(pageState)} }
+      options: { pageSize: 8, pageState: ${JSON.stringify(pageState)} }
     ) {
       values {
         year,
         title,
         duration,
         synopsis,
-        thumbnail
+        thumbnail,
+        source
       }
       pageState
     }
   }
-  `  
+  `
   const response = await fetch(url, {
     method: 'POST',
     headers: {
